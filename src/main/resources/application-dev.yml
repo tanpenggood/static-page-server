@@ -10,4 +10,4 @@ spring:
     static-locations:
 static-page:
   resource-mappings:
-    crm: D:/code/crm-tool/static-page/
+    api: D:/code/api/

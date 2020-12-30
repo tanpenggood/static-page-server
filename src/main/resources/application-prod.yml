@@ -9,4 +9,4 @@ spring:
 
 static-page:
   resource-mappings:
-    crm: /home/scapp/t-file/
+    api: /home/data/api/
