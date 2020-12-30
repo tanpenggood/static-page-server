@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <!--适配移动端的屏幕-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <title></title>
+    <!-- 引入样式文件 -->
+    <link rel="stylesheet" href="/static/css/vant@2.11.css"/>
+</head>
+<body>
+<div id="app">
+    <van-index-bar>
+        <template th:each="htmlEntries : ${allHtmlMap}">
+            <template th:each="entry : ${htmlEntries}">
+                <van-index-anchor th:attr="index=${entry.key}"></van-index-anchor>
+                <van-cell th:each="htmlName : ${entry.value}">
+                    <a th:href="${htmlName}" th:text="${htmlName}" target="_blank"></a>
+                </van-cell>
+            </template>
+        </template>
+    </van-index-bar>
+</div>
+</body>
+<!-- 引入 Vue 和 Vant 的 JS 文件 -->
+<script src="/static/js/vue@2.6.min.js"></script>
+<script src="/static/js/vant@2.11.min.js"></script>
+<script>
+    new Vue({
+        el: '#app',
+    });
+</script>
+</html>

@@ -1,0 +1,13 @@
+server:
+  port: 8080
+
+spring:
+  thymeleaf:
+    cache: false
+    prefix: classpath:/templates/
+    suffix: .html
+  resources:
+    static-locations:
+static-page:
+  resource-mappings:
+    crm: D:/code/crm-tool/static-page/

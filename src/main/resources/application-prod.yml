@@ -1,0 +1,12 @@
+server:
+  port: 8081
+
+spring:
+  thymeleaf:
+    cache: false
+    prefix: classpath:/templates/
+    suffix: .html
+
+static-page:
+  resource-mappings:
+    crm: /home/scapp/t-file/
